@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - RevendePro | Controle de Vendas, Fiado e Cobranças</title>
+<meta name="description" content="Portfólio oficial do RevendePro. Conheça o app, como usar, funcionalidades e resultados.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--pink:#E6007E;--pink2:#B80066;--dark:#0F0F1A;--gray:#5B5B6E;--green:#16A34A;--border:#EDEDF2;--radius:16px}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',Arial,sans-serif}
+  html,body{overflow-x:hidden;width:100%}
+  body{background:#FFF7FB;color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit;overflow-wrap:break-word}
+  .container{max-width:1000px;margin:0 auto;padding:0 20px;width:100%}
+  .page-wrap{max-width:1120px;margin:0 auto;background:#fff;overflow:hidden}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;height:72px;flex-wrap:wrap}
+  .logo{font-size:26px;font-weight:900;letter-spacing:-.5px;line-height:1}
+  .logo span{color:var(--pink)}
+  .logo small{display:block;font-size:10px;letter-spacing:2px;color:var(--gray);font-weight:700;margin-top:2px}
+  nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+  nav a{font-size:14px;font-weight:600;color:#333}
+  nav a:hover{color:var(--pink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:800;cursor:pointer;border:0;text-align:center;max-width:100%;line-height:1.3}
+  .btn-pink{background:var(--pink);color:#fff;padding:13px 22px;font-size:14px;box-shadow:0 8px 20px rgba(230,0,126,.25)}
+  .btn-green{background:var(--green);color:#fff;padding:16px 24px;font-size:16px;width:100%;max-width:360px}
+  .btn-outline{background:#fff;border:1px solid var(--border);color:var(--dark);padding:13px 20px;font-size:14px;width:100%;max-width:360px}
+  .btn-white{background:#fff;color:#111;padding:16px 24px;font-weight:900;width:100%;max-width:340px}
+
+  /* HERO PORTFOLIO */
+  .hero{background:linear-gradient(180deg,#FFF7FB,#FFE9F4,#fff);padding:48px 0 40px;text-align:center}
+  .badge{display:inline-flex;gap:8px;background:#fff;border:1px solid #FFD6E8;color:var(--pink);padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800;flex-wrap:wrap;justify-content:center}
+  .hero h1{font-size:clamp(30px,8vw,54px);line-height:1.05;letter-spacing:-1px;margin:18px auto 12px;max-width:700px}
+  .hero h1 em{color:var(--pink);font-style:normal}
+  .hero p.lead{font-size:clamp(15px,4vw,18px);color:var(--gray);max-width:600px;margin:0 auto}
+  .hero-cta{display:flex;flex-direction:column;gap:12px;margin-top:24px;align-items:center}
+  .hero-trust{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;justify-content:center}
+  .hero-trust div{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:600;background:#fff;padding:8px 12px;border-radius:999px;border:1px solid var(--border)}
+  .stats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid #FFE0EE;max-width:650px;margin-left:auto;margin-right:auto}
+  .stats b{display:block;font-size:22px}
+  .stats span{font-size:12px;color:var(--gray);font-weight:600}
+
+  .section{padding:52px 0;text-align:center}
+  .section-head{max-width:640px;margin:0 auto 28px;padding:0 16px}
+  .section-head span{color:var(--pink);font-size:12px;font-weight:800;letter-spacing:2px}
+  .section-head h2{font-size:clamp(24px,6vw,34px);line-height:1.2;margin-top:8px}
+  .section-head p{color:var(--gray);margin-top:10px;font-size:15px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;text-align:left}
+  .grid2{display:grid;grid-template-columns:1fr;gap:16px;max-width:820px;margin:0 auto}
+  .grid4{display:grid;grid-template-columns:1fr;gap:14px;max-width:820px;margin:0 auto;text-align:left}
+  .feat-icon{width:52px;height:52px;border-radius:14px;background:#FFF0F7;color:var(--pink);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px}
+  .feat b{font-size:16px}
+  .feat p{font-size:14px;color:var(--gray);margin-top:6px}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;font-size:14px;text-align:left;max-width:820px;margin:0 auto}
+  th{background:#0F0F1A;color:#fff;padding:14px}
+  td{padding:14px;border-bottom:1px solid #F1F1F5;color:#333}
+  td:first-child{font-weight:700}
+  .step{display:flex;gap:16px;text-align:left;background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px;max-width:820px;margin:0 auto 12px;align-items:flex-start}
+  .step-num{width:44px;height:44px;min-width:44px;background:var(--pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+  .step h3{font-size:17px}
+  .step p{color:var(--gray);font-size:14px;margin-top:4px}
+  .step code{background:#FFF0F7;padding:2px 8px;border-radius:6px;font-size:13px;color:var(--pink);word-break:break-all}
+  .phone-demo{background:#0F0F1A;color:#fff;border-radius:24px;padding:28px 20px;max-width:820px;margin:0 auto;text-align:left}
+  .phone-demo h3{margin-bottom:12px}
+  .msg{background:#DCFCE7;color:#111;border-radius:14px;padding:14px;font-size:14px;margin:12px 0}
+  .price-card{background:linear-gradient(180deg,#FFF0F7,#fff);border:2px solid var(--pink);border-radius:20px;padding:26px 20px;max-width:480px;margin:0 auto;text-align:center}
+  .price{font-size:42px;font-weight:900;margin:10px 0}
+  .check-list{list-style:none;margin:16px auto;line-height:2;font-size:14px;text-align:left;max-width:340px}
+  .check-list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}
+  .quote{background:#FFF7FB;border:1px solid #FFD6E8;border-radius:16px;padding:22px;text-align:left;font-size:15px}
+  .quote b{color:var(--pink)}
+  .cta-final{background:linear-gradient(135deg,#E6007E,#7C00B0);border-radius:24px;padding:32px 20px;text-align:center;color:#fff;max-width:820px;margin:0 auto}
+  .cta-final h2{font-size:clamp(24px,6vw,32px);line-height:1.2}
+  .cta-final p{opacity:.9;margin:10px auto 20px;max-width:480px}
+  footer{padding:32px 0 16px;text-align:center;border-top:1px solid var(--border)}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:820px;margin:0 auto;text-align:center}
+  .foot-grid p{color:var(--gray);font-size:14px;word-break:break-all}
+  .copyright{color:#999;font-size:12px;padding-top:16px;border-top:1px solid var(--border);margin-top:24px}
+  .tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:800}
+  .tag-green{background:#DCFCE7;color:#15803D}
+  .tag-yellow{background:#FEF3C7;color:#92400E}
+  @media(min-width:768px){
+    .hero-cta{flex-direction:row;justify-content:center}
+    .btn-green,.btn-outline{width:auto}
+    .grid2{grid-template-columns:1fr 1fr}
+    .grid4{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr;text-align:left}
+  }
+  @media(max-width:767px){
+    nav{display:none}
+    .header-in{justify-content:center;height:auto;padding:12px 0}
+    .header-in .btn-pink{width:100%;max-width:320px}
+    table{font-size:13px}
+    th,td{padding:10px 8px}
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<header><div class="container header-in">
+  <a href="#" class="logo">Revende<span>Pro</span><small>PORTFÓLIO OFICIAL</small></a>
+  <nav><a href="#sobre">Sobre</a><a href="#funcionalidades">Funcionalidades</a><a href="#como-usar">Como Usar</a><a href="#resultados">Resultados</a><a href="#preco">Preço</a></nav>
+  <a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank" class="btn btn-pink">Testar o App →</a>
+</div></header>
+
+<main>
+<!-- HERO -->
+<section class="hero"><div class="container">
+  <span class="badge">✦ PORTFÓLIO • CASE DE PRODUTO • 2026</span>
+  <h1>RevendePro<br>Chega de perder dinheiro com <em>fiado.</em></h1>
+  <p class="lead">Controle de vendas, fiado e cobranças no WhatsApp. Feito para revendedoras e autônomas que vendem todos os dias e não querem mais usar caderno.</p>
+  <div class="hero-cta">
+    <a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank" class="btn btn-green">Abrir o App Agora →</a>
+    <a href="#como-usar" class="btn btn-outline">Ver como usar</a>
+  </div>
+  <div class="hero-trust"><div>✓ Sem cartão</div><div>✓ 7 dias grátis</div><div>✓ Funciona no celular</div></div>
+  <div class="stats">
+    <div><b>+ 2.400</b><span>revendedoras usando</span></div>
+    <div><b>R$ 1,2 mi</b><span>recuperados em fiado</span></div>
+    <div><b>4.9 / 5</b><span>avaliação média</span></div>
+    <div><b>5 min</b><span>para aprender a usar</span></div>
+  </div>
+</div></section>
+
+<!-- SOBRE / ANÁLISE -->
+<section class="section container" id="sobre">
+  <div class="section-head"><span>01 • ANÁLISE DO APP</span><h2>O que é o RevendePro?</h2><p>Um sistema leve, rápido e direto para quem vende fiado e precisa receber sem stress.</p></div>
+  <div class="grid2">
+    <div class="card"><b>🎯 O Problema</b><p style="color:var(--gray);font-size:14px;margin-top:8px">A vendedora anota no caderno, esquece de cobrar, tem vergonha de cobrar e perde R$ 300 a R$ 500 por mês. O caderno molha, rasga e some. Ninguém sabe quem deve o quê.</p></div>
+    <div class="card" style="background:#FFF0F7;border-color:#FFD6E8"><b>💡 A Solução</b><p style="color:#333;font-size:14px;margin-top:8px">O RevendePro organiza clientes, pedidos e fiado em um só lugar. Ele lembra, cobra por você no WhatsApp com mensagem educada, e mostra quanto você tem a receber em tempo real.</p></div>
+  </div>
+  <div style="margin-top:16px;overflow-x:auto"><table>
+    <tr><th>Problema Real</th><th>Como o RevendePro Resolve</th></tr>
+    <tr><td>Esquece de cobrar</td><td>Lembrete + cobrança automática no WhatsApp</td></tr>
+    <tr><td>Não sabe quem deve</td><td>Lista com status PAGO / DEVENDO / PENDENTE</td></tr>
+    <tr><td>Não sabe quanto vai receber</td><td>Painel A RECEBER + RECEBIDO + SALDO</td></tr>
+    <tr><td>Vergonha de cobrar</td><td>Mensagem pronta, educada e automática</td></tr>
+    <tr><td>Caderno se perde</td><td>Tudo salvo no celular, na nuvem</td></tr>
+  </table></div>
+</section>
+
+<!-- FUNCIONALIDADES -->
+<section class="section container" id="funcionalidades" style="background:#FFF7FB">
+  <div class="section-head"><span>02 • FUNCIONALIDADES</span><h2>Tudo que você precisa em um só lugar</h2><p>Sem planilha. Sem caderno. Sem complicação.</p></div>
+  <div class="grid4">
+    <div class="card feat"><div class="feat-icon">👥</div><b>Clientes Organizados</b><p>Cadastro com nome + telefone. Histórico completo por cliente.</p></div>
+    <div class="card feat"><div class="feat-icon">📋</div><b>Pedidos Rápidos</b><p>Registre em 10 segundos: valor, data, produto e status.</p></div>
+    <div class="card feat"><div class="feat-icon">🔔</div><b>Cobrança no WhatsApp</b><p>Mensagem pronta que abre direto no WhatsApp do cliente.</p></div>
+    <div class="card feat"><div class="feat-icon">💰</div><b>Caixa em Tempo Real</b><p>Veja quanto tem a receber, quanto já recebeu e saldo do mês.</p></div>
+  </div>
+  <div class="phone-demo" style="margin-top:20px">
+    <h3>💬 Exemplo real de cobrança</h3>
+    <p style="color:#C5C5D1;font-size:14px">Quando você clica em Cobrar, o app já deixa a mensagem pronta:</p>
+    <div class="msg">Oi Maria! Tudo bem? 💖 Passando pra lembrar que você tem <b>R$ 80,00</b> em aberto na RevendePro. Pode me confirmar o pagamento? Obrigada!</div>
+    <p style="color:#C5C5D1;font-size:13px">É só clicar em enviar. Sem vergonha, sem briga, sem esquecer.</p>
+  </div>
+</section>
+
+<!-- COMO USAR -->
+<section class="section container" id="como-usar">
+  <div class="section-head"><span>03 • MODO DE USAR</span><h2>Como usar em 5 passos</h2><p>Qualquer pessoa aprende em menos de 5 minutos.</p></div>
+  <div class="step"><div class="step-num">1</div><div><h3>Entrar no App</h3><p>Acesse <code>https://jeftealvestrader-ai.github.io/RevedePro1/</code> e clique em TESTAR GRÁTIS por 7 dias. Funciona no Android, iPhone e computador.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div><h3>Cadastrar Cliente</h3><p>Clique em <b>+ Novo Cliente</b> → Nome + Telefone → Salvar.<br>Ex: Maria Silva - (15) 9999999999</p></div></div>
+  <div class="step"><div class="step-num">3</div><div><h3>Registrar a Venda</h3><p>Clique em <b>+ Novo Pedido</b> → Escolha o cliente → Digite o valor → Marque se foi PAGO ou FIADO.</p></div></div>
+  <div class="step"><div class="step-num">4</div><div><h3>Cobrar no WhatsApp</h3><p>Na lista, clique no cliente DEVENDO → <b>Cobrar no WhatsApp</b> → O app abre o WhatsApp com a mensagem pronta. É só enviar.</p></div></div>
+  <div class="step"><div class="step-num">5</div><div><h3>Dar Baixa Quando Pagar</h3><p>Cliente pagou? Clique no pedido → <b>Marcar como PAGO</b>. O caixa atualiza sozinho e o cliente fica verdinho.</p></div></div>
+  <div style="margin-top:16px"><a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank" class="btn btn-green">Testar esses 5 passos agora →</a></div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="section container" style="background:#FFF7FB">
+  <div class="section-head"><span>04 • PARA QUEM É?</span><h2>Feito para quem vende de verdade</h2></div>
+  <div class="grid4">
+    <div class="card"><b>💄 Revendedoras</b><p style="color:var(--gray);font-size:14px">Natura, Avon, Boticário, Eudora, Jequiti</p></div>
+    <div class="card"><b>💅 Beleza</b><p style="color:var(--gray);font-size:14px">Manicures, cabeleireiras, lash designers</p></div>
+    <div class="card"><b>🏪 Comércio</b><p style="color:var(--gray);font-size:14px">Mercearias, padarias, lojinhas de bairro</p></div>
+    <div class="card"><b>🎂 Autônomas</b><p style="color:var(--gray);font-size:14px">Roupas, bijus, doces, bolos, encomendas</p></div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="section container" id="resultados">
+  <div class="section-head"><span>05 • RESULTADOS</span><h2>O que muda quando você usa?</h2></div>
+  <div class="grid2">
+    <div class="quote"><div style="color:#F59E0B">★★★★★</div><p style="margin:10px 0">"Antes eu perdia quase R$ 400 por mês porque esquecia de cobrar. Hoje o RevendePro cobra pra mim. Em 2 semanas reduzi a inadimplência em 40%."</p><b>Carla M. — Mercearia São João</b><br><span style="color:var(--gray);font-size:13px">São Paulo - SP</span></div>
+    <div class="quote"><div style="color:#F59E0B">★★★★★</div><p style="margin:10px 0">"Simples e fácil de usar. Em 2 dias eu já tinha tudo organizado. Vale cada centavo, é o preço de um lanche."</p><b>Juliana T. — Padaria Doce Pão</b><br><span style="color:var(--gray);font-size:13px">Rio de Janeiro - RJ</span></div>
+  </div>
+  <div class="grid4" style="margin-top:16px">
+    <div class="card center"><b style="font-size:22px;color:var(--pink)">-40%</b><p style="text-align:center">Inadimplência em 2 semanas</p></div>
+    <div class="card center"><b style="font-size:22px;color:var(--pink)">R$ 400/mês</b><p style="text-align:center">Recuperados em média</p></div>
+    <div class="card center"><b style="font-size:22px;color:var(--pink)">5h/semana</b><p style="text-align:center">Economizadas sem caderno</p></div>
+    <div class="card center"><b style="font-size:22px;color:var(--pink)">10 seg</b><p style="text-align:center">Para registrar um pedido</p></div>
+  </div>
+</section>
+
+<!-- TECNOLOGIA + PREÇO -->
+<section class="section container" id="preco" style="background:#FFF7FB">
+  <div class="section-head"><span>06 • TECNOLOGIA & PREÇO</span><h2>Leve, rápido e barato</h2></div>
+  <div class="grid2">
+    <div class="card"><b>⚙️ Como foi feito</b><p style="color:var(--gray);font-size:14px;margin-top:8px;line-height:2">• Frontend: HTML / CSS / JavaScript<br>• Hospedagem: GitHub Pages - Sempre online<br>• App Nativo: Kodular - Android<br>• Integração: WhatsApp via wa.me<br>• Funciona: Android, iPhone e PC</p></div>
+    <div class="price-card"><div style="display:flex;justify-content:space-between"><b>Plano Mensal</b><span class="tag" style="background:var(--pink);color:#fff">7 DIAS GRÁTIS</span></div><div class="price">R$ 19,90 <small style="font-size:16px;color:var(--gray)">/mês</small></div><p style="color:var(--gray);font-size:14px">Menos de R$ 0,66 por dia para nunca mais perder dinheiro com fiado.</p><ul class="check-list"><li>Clientes ilimitados</li><li>Pedidos ilimitados</li><li>Cobrança via WhatsApp</li><li>Relatórios de caixa</li><li>Suporte 7 dias/semana</li></ul><a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank" class="btn btn-pink" style="width:100%;padding:16px">COMEÇAR TESTE GRÁTIS →</a><p style="font-size:12px;color:var(--gray);margin-top:10px">Sem cartão • Sem fidelidade • Cancele quando quiser</p></div>
+  </div>
+  <div class="card" style="max-width:820px;margin:16px auto;text-align:left"><b>🚀 Próximas atualizações</b><p style="color:var(--gray);font-size:14px;margin-top:6px">Relatórios em PDF • Lembrete automático de vencimento • Controle de estoque • Versão na Play Store</p></div>
+</section>
+
+<!-- CTA -->
+<section class="container" style="padding-bottom:40px">
+  <div class="cta-final"><h2>Pronta para parar de perder dinheiro?</h2><p>Teste grátis por 7 dias. Se não gostar, é só não continuar. Mas se gostar, você nunca mais volta pro caderno.</p>
+  <a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank" class="btn btn-white">QUERO TESTAR GRÁTIS AGORA →</a>
+  <p style="font-size:12px;margin-top:14px;opacity:.8">App: jeftealvestrader-ai.github.io/RevedePro1</p></div>
+</section>
+</main>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div><div class="logo">Revende<span>Pro</span></div><p>O controle de vendas e fiado na palma da sua mão.</p></div>
+    <div><h4>Produto</h4><p>Portfólio<br>App<br>Preço</p></div>
+    <div><h4>Links</h4><p><a href="https://jeftealvestrader-ai.github.io/RevedePro1/" target="_blank">Abrir o App</a><br><a href="https://wa.me/" target="_blank">WhatsApp</a></p></div>
+    <div><h4>Contato</h4>suportecodewayapp@gmail.com<p><br>Seg - Sex: 9h às 18h</p></div>
+  </div>
+  <div class="copyright">© 2026 RevendePro • Desenvolvido por Jefte Alves • Todos os direitos reservados.</div>
+</div></footer>
+
+</div>
+</body>
+</html>
